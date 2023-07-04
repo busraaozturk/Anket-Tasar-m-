@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(-140deg, #426da9, #E8EAF6, #702f8a );
+}
+.form-container{
+    align-items: center;
+    width: 50%;
+    padding: 10px 50px 40px 50px;
+    border-radius: 20px;
+    background-color: #FAFAFA;
+    box-shadow: 5px 10px 18px #BDBDBD;
+    user-select: none;
+}
+.form{
+    font-size: 35px;
+    font-weight: 600;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    color: dimgray;
+    letter-spacing: 2px;
+    font-family: 'Cormorant Garamond', serif;
+}
+.form-inputs{
+    width: 100%;
+    display: grid;
+    font-size: 18px;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+    font-weight: bolder;
+}
+.input-box input{
+    width: 75%;
+    margin-right: 20px;
+    padding: 10px 15px;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #e1e4e8;
+    outline: none;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    font-family: 'Cormorant Garamond', serif;
+}
+input:focus{
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border-radius: 5px;
+    letter-spacing: 1.75px;
+}
+.button-box button{
+    width: 30%;
+    margin-right: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* List Style */
+
+.anket{
+    border: 1px solid #BDBDBD;
+    padding: 10px 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.anket span{
+    font-size: 20px;
+    margin-right: 20px;
+    text-transform: capitalize;
+}
+.anket button{
+    width: 20%;
+    margin-right: 10px;
+    float: right;
+}
+
+/* Form Doldurma  */
+
+.fill{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    font-weight: 600;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    color: dimgray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.fill-box span{
+    color: #999999;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    pointer-events: none;
+    text-transform: capitalize;
+}
+.fill-box{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #BDBDBD;
+    position: relative;
+}
+.fill-box input
+{
+    width: 65%;
+    background: transparent;
+    border: 1px solid lightgray;
+    padding: 8px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+    float: right;
+    letter-spacing: 1px;
+    margin-top: -5px;
+}
+.fill-box input:focus,
+.fill-box input:valid{
+    border-color: #4158d0;
+}
+.fillButton{
+    margin-top: 15px;
+    width: 25%;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    float: right;
+    letter-spacing: 2px;
+}
+.fillButton:active{
+    transform: scale(0.95);
+}

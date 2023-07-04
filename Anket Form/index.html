@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    
+    <title>Anket Form</title>
+</head>
+<body>
+    <!-- Ekle ve Düzenle Formlarının Tasarımı -->
+    <form class="form-container" id="addFormDiv" >
+        <div>
+            <div class="form">ANKET FORM EKLE</div>
+            <div class="form-inputs">
+                <div class="input-box">
+                    <input type="text" class="formTextBox" name="formbaslik" id="formbaslik" placeholder="Form Başlık Giriniz" autocomplete="off" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" class="formTextBox" name="name" id="name" placeholder="Etiket Giriniz" autocomplete="off">
+                    <div class="dropdown">
+                        <button id="dt1" class="btn btn-outline-primary dropdown-toggle formType" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tip Seçin</button>
+                        <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button" onclick="SelectType('Text','dt1')" >Text</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="SelectType('Select','dt1')">Select</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="SelectType('Number','dt1')">Number</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="SelectType('Password','dt1')">Password</button></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="errorDiv" style="color:red;"></div>
+
+                <div class="button-box">
+                    <button type="button" class="btn btn-outline-primary" id="AddQuestion">
+                        <i class="bi bi-plus-circle-fill"></i> Etiket Ekle
+                    </button>
+                
+                    <button type="button" id="gonder" class="btn btn-primary">
+                        Kaydet
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Listele Form Tasarımı -->
+    <div class="form-container" id="anketcontainer">
+        <div class="form">Anket Listesi</div>
+        <div class="anket" id="anket1">
+            <span>tasarım</span>
+            <button class="btn btn-outline-primary" id="edit" type="button" data-toggle="tooltip" data-placement="top">
+                <i class="fa fa-edit"></i> Düzenle
+            </button>
+            <button class="btn btn-outline-danger delete" type="button" data-toggle="tooltip" data-placement="top" title="Sil">
+                <i class="fa fa-trash"></i> Sil
+            </button>
+            <button class="btn btn-outline-success" id="fill" type="button" data-toggle="tooltip" data-placement="top" title="Doldur">
+                <i class="fa-solid fa-file-pen"></i> Doldur
+            </button>
+        </div>
+
+        <div class="anket">
+            <span>Örnek Tasarım</span>
+            <button class="btn btn-outline-primary edit" type="button" data-toggle="tooltip" data-placement="top" title="Düzenle">
+                <i class="fa fa-edit"></i> Düzenle
+            </button>
+            <button class="btn btn-outline-danger delete" type="button" data-toggle="tooltip" data-placement="top" title="Sil">
+                <i class="fa fa-trash"></i> Sil
+            </button>
+            <button class="btn btn-outline-success btnfill" type="button" data-toggle="tooltip" data-placement="top" title="Doldur" onclick="myalert()">
+                <i class="fa-solid fa-file-pen"></i> Doldur
+            </button>
+        </div>
+        
+        <button type="button" class="btn btn-outline-primary" id="editForm"
+        style="width: 25%; float: right; letter-spacing: 1px; font-weight: 500; font-size: 17px;">
+            Ekle
+        </button>
+    </div>
+    
+    <!-- Form Doldur Tasarımı -->
+    <form class="form-container" id="fillForm" style="width: 50%;">
+        <div class="fill"></div>
+        
+        <button type="button" class="btn btn-outline-primary fillButton" id="fillButton">
+            Doldur
+        </button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+        crossorigin="anonymous" npm i bootstrap-icons>
+    </script>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>
